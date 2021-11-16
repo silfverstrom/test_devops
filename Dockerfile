@@ -3,7 +3,8 @@ FROM node:latest as base
 WORKDIR /app
 
 ADD package.json .
-ADD *.js .
+ADD index.js .
+ADD test.js .
 
 from base as test
 RUN npm run test
